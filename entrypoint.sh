@@ -25,10 +25,18 @@ build_package(){
 
 upload_package(){
     export ANACONDA_API_TOKEN=$INPUT_ANACONDATOKEN
-    anaconda upload --label main *.bz2
-#     anaconda upload --label main linux-64/*.tar.bz2
-#     anaconda upload --label main osx-64/*.tar.bz2
-#     anaconda upload --label main win-64/*.tar.bz2
+    anaconda upload --label main osx-64/*.tar.bz2
+    anaconda upload --label main osx-arm64/*.tar.bz2
+    anaconda upload --label main linux-32/*.tar.bz2
+    anaconda upload --label main linux-64/*.tar.bz2
+    anaconda upload --label main linux-ppc64/*.tar.bz2
+    anaconda upload --label main linux-ppc64le/*.tar.bz2
+    anaconda upload --label main linux-s390x/*.tar.bz2
+    anaconda upload --label main linux-armv6l/*.tar.bz2
+    anaconda upload --label main linux-armv7l/*.tar.bz2
+    anaconda upload --label main linux-aarch64/*.tar.bz2
+    anaconda upload --label main win-32/*.tar.bz2
+    anaconda upload --label main win-64/*.tar.bz2
 }
 
 go_to_build_dir
